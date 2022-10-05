@@ -53,6 +53,14 @@
 		"unit": "seconds",
 		"defaultValue": 30
 	},
+	"auto_relock_time_10_to_180": {
+		"$import": "~/templates/master_template.json#base_0-127_nounit",
+		"label": "Auto Relock Time",
+		"unit": "seconds",
+		"minValue": 10,
+		"maxValue": 180,
+		"defaultValue": 30
+	},
 	"auto_relock_time_127": {
 		"$import": "~/templates/master_template.json#base_0-127_nounit",
 		"label": "Auto Relock Time",
@@ -115,6 +123,14 @@
 		"unit": "seconds",
 		"minValue": 10,
 		"maxValue": 127,
+		"defaultValue": 60
+	},
+	"wrong_code_lockout_10_to_180": {
+		"$import": "~/templates/master_template.json#base_0-180_nounit",
+		"label": "Wrong Code Lockout Time",
+		"unit": "seconds",
+		"minValue": 10,
+		"maxValue": 180,
 		"defaultValue": 60
 	},
 	"wrong_tag_limit": {
@@ -205,6 +221,33 @@
 			{
 				"label": "Privacy mode",
 				"value": 2
+			}
+		]
+	},
+	"operating_mode_with_passage": {
+		"label": "Operating Mode",
+		"valueSize": 1,
+		"minValue": 0,
+		"maxValue": 3,
+		"defaultValue": 0,
+		"unsigned": true,
+		"allowManualEntry": false,
+		"options": [
+			{
+				"label": "Normal mode",
+				"value": 0
+			},
+			{
+				"label": "Vacation mode",
+				"value": 1
+			},
+			{
+				"label": "Privacy mode",
+				"value": 2
+			},
+			{
+				"label": "Passage mode",
+				"value": 3
 			}
 		]
 	},
